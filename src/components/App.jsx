@@ -20,6 +20,7 @@ class App extends Component {
     let isAdded = false;
     this.state.contacts.forEach(el => {
       if (el.name.toLowerCase() === normalizedName) {
+        alert(`${name}: is already in contacts`);
         Notiflix.Notify.failure(`${name}: is already in contacts`);
         isAdded = true;
       }
